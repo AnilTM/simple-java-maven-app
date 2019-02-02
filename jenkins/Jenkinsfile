@@ -1,14 +1,8 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3-alpine'
-            args '-v /root/.m2:/root/.m2'
-        }
-    }
     stages {
-        stage('Build') {
+        stage('TMvalidation') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                build 'jenkinsjob1'
             }
         }
         stage('Test') {
