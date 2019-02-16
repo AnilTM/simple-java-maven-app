@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('TM_validation') {
             steps {
-                threatModeler()
+                build 'TM_Freestyle_Test'
             }
         }
         stage('Test') {
