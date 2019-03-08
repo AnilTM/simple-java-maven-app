@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('TM_validation') {
             steps {
-                threatModeler(true)
+                threatModeler(false)
             }
         }
         stage('Test') {
